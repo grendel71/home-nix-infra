@@ -32,17 +32,18 @@
 	user="jellyfin";
   };
   users.users.jellyfin = {
-	createHome = true;
-	description = "jellyfinuser";
-	group = "jellyfin";
-	home = "/home/jellyfin";
-	uid = 1000;
+	  createHome = true;
+	  description = "jellyfinuser";
+	  group = "jellyfin";
+	  home = "/home/jellyfin";
+	  uid = 1000;
   };
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   environment.systemPackages = with pkgs; [
-	git
-	htop
-  btop
+	  git
+	  htop
+    btop
+    screenfetch
   ];
   system.stateVersion = "25.05";
   hardware.graphics.enable = true;
