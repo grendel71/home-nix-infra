@@ -47,6 +47,10 @@
   hardware.graphics.enable = true;
   services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia.open = false;
+  
+  system.autoUpgrade.flake = "github:grendel71/home-nix-infra";
+  system.autoUpgrade.enable = true;
+
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
     version = "535.274.02";
 
