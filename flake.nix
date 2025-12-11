@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=25.05";
     comin = {
-      url = "github:nlweo/comin";
+      url = "github:nlewo/comin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -17,6 +17,7 @@
           ({...}: {
             services.comin = {
               enable = true;
+              hostname = "home-jellyfin";
               remotes = [{
                 name = "origin";
                 url = "https://github.com/grendel71/home-nix-infra.git";
