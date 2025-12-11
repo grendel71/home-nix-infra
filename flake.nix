@@ -9,7 +9,7 @@
     };
   };
 
-  outputs = { self, nixpkgs }@inputs: {
+  outputs = { self, nixpkgs, comin, ... }@inputs: {
 	nixosConfigurations.home-jellyfin = nixpkgs.lib.nixosSystem {
 		system = "x86_64-linux";
 		modules = [
