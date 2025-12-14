@@ -200,7 +200,7 @@ jaidenpapp.com {
 
 	@vaultwarden host v.local.grendel71.net
 	handle @vaultwarden {
-		reverse_proxy http://vaultwarden:80
+		reverse_proxy http://xiangct.home.arpa:80
 	}
 
 	@portainer host pt.local.grendel71.net
