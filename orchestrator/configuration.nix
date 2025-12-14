@@ -26,4 +26,9 @@
     '';
   };
   system.stateVersion = "25.11";
+
+  services.technitium-dns-server = {
+    enable = true;
+    openFirewall = true;
+  };
 }
