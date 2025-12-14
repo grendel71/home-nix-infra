@@ -25,7 +25,26 @@
               }];
             };
           })
-			./configuration.nix
+			./home-jellyfin/configuration.nix
+		];
+
+ 	};
+	nixosConfigurations.orchestrator = nixpkgs.lib.nixosSystem {
+		system = "x86_64-linux";
+		modules = [
+      comin.nixosModules.comin
+          ({...}: {
+            services.comin = {
+              enable = true;
+              hostname = "orchestrator";
+              remotes = [{
+                name = "origin";
+                url = "https://github.com/grendel71/home-nix-infra.git";
+                branches.main.name = "main";
+              }];
+            };
+          })
+			./orchestrator/configuration.nix
 		];
 
  	};
