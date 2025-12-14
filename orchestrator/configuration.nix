@@ -1,6 +1,9 @@
 { config, modulesPath, pkgs, lib, ... }:
 {
-  imports = [ (modulesPath + "/virtualisation/proxmox-lxc.nix") ];
+  imports = [ 
+    (modulesPath + "/virtualisation/proxmox-lxc.nix") 
+    ./caddy.nix
+  ];
   nix.settings = { sandbox = false; };  
   proxmoxLXC = {
     manageNetwork = true;
@@ -30,7 +33,16 @@
   services.technitium-dns-server = {
     enable = true;
     openFirewall = true;
-    
+    firewallUDPPorts = [
+      67
+      68
+      53
+    ];
+    firewallTCPPorts = [
+      53
+      5380
+
+    ];
   };
 
   services.gitea = {
@@ -39,7 +51,7 @@
   };
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 3000 ];
+    allowedTCPPorts = [ 3000 80 443 ];
 
   };
 }
