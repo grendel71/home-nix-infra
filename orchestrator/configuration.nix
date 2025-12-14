@@ -37,4 +37,9 @@
     enable = true;
     #openFirewall = true;
   };
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 3000 ];
+
+  };
 }
