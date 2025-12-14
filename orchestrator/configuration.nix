@@ -35,6 +35,6 @@
 
   services.gitea = {
     enable = true;
-    openFirewall = true;
+    #openFirewall = true;
   };
 }
