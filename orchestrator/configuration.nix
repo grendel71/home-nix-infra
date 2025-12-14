@@ -3,7 +3,7 @@
   imports = [ (modulesPath + "/virtualisation/proxmox-lxc.nix") ];
   nix.settings = { sandbox = false; };  
   proxmoxLXC = {
-    manageNetwork = false;
+    manageNetwork = true;
     privileged = false;
   };
   nix.settings.experimental-features = [ "nix-command" "flakes"];
@@ -31,5 +31,10 @@
     enable = true;
     openFirewall = true;
     
+  };
+
+  services.gitea = {
+    enable = true;
+    openFirewall = true;
   };
 }
