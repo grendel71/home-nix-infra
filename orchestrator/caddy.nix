@@ -224,6 +224,10 @@ jaidenpapp.com {
 	handle @syncthing {
 		reverse_proxy http://zhangfs.home.arpa:8384
 	}
+	@gitea host gitea.local.grendel71.net
+	handle @gitea {
+		reverse_proxy http://192.168.1.50:3000
+	}
 }
 
     '';
