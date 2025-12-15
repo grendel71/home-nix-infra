@@ -48,6 +48,7 @@
   services.gitea = {
     enable = true;
     #openFirewall = true;
+    settings.server.ROOT_URL = "https://gitea.local.grendel71.net";
   };
   networking.firewall = {
     enable = true;
