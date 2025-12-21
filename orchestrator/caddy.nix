@@ -162,7 +162,7 @@ jaidenpapp.com {
 
 	@couchdb host couchdb.local.grendel71.net
 	handle @couchdb {
-		reverse_proxy http://docker.home.arpa:5984
+		reverse_proxy http://192.168.1.173:5984
 	}
 
 	@dns host dns.local.grendel71.net
