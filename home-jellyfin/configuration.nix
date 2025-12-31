@@ -49,7 +49,7 @@
   hardware.graphics.enable = true;
   services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia.open = false;
-  
+  networking.hostName = "home-jellyfin-node";
   #system.autoUpgrade.flake = "github:grendel71/home-nix-infra";
   #system.autoUpgrade.enable = true;
 
