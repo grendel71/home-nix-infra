@@ -44,7 +44,7 @@
 	  htop
     btop
     screenfetch
-    nvim
+    neovim
   ];
   system.stateVersion = "25.05";
   hardware.graphics.enable = true;
