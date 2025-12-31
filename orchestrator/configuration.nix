@@ -55,4 +55,5 @@
     allowedTCPPorts = [ 3000 80 443 ];
 
   };
+  networking.hostName = "orchestrator-node-1";
 }
