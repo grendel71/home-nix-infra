@@ -150,10 +150,6 @@ jaidenpapp.com {
 	handle @khoj {
 		reverse_proxy http://xianggpu.home.arpa:42110
 	}
-	@papp host papp.local.grendel71.net
-	handle @papp {
-		reverse_proxy http://papp.home.arpa:8080
-	}
 	@cockpit host cockpit.local.grendel71.net
 	handle @cockpit {
 		reverse_proxy https://ZhangFs.home.arpa:9090 {
